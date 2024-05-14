@@ -1,0 +1,1 @@
+{"rows":[{"Field":"id","Type":"int","Null":"NO","Key":"","Default":"0","Extra":"NULL"},{"Field":"name","Type":"varchar(255)","Null":"YES","Key":"","Default":null,"Extra":"NULL"},{"Field":"product_date","Type":"date","Null":"YES","Key":"","Default":null,"Extra":"NULL"}]}
