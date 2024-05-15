@@ -46,6 +46,7 @@ pipeline {
                 ansiblePlaybook(
                     playbook: './ansible/playbooks/site.yml',
                     inventory: './ansible/inventories/inventory.yml',
+		    extras: "-e ansible_sudo_pass=04072002"
                 )
             }
         } 
