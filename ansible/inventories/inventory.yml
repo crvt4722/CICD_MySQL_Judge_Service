@@ -1,3 +1,7 @@
 # Master inventory.
 [target_vm]
 192.168.59.140 target_vm_ip=192.168.59.140
+[target_vm:vars]
+ansible_become=true
+ansible_become_method=sudo
+ansible_become_password=04072002
