@@ -12,6 +12,8 @@
   community.docker.docker_compose_v2:
     project_src: /home/crvt4722/files
     state: present
+    env: 
+      IMAGE_TAG: v0.0.5
 
 - name: Make sure database is started
   pause:
