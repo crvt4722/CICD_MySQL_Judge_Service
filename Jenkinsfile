@@ -47,7 +47,7 @@ pipeline {
                     playbook: './ansible/playbooks/site.yml',
                     inventory: './ansible/inventories/inventory.yml',
 		    credentialsId: 'ansible-ssh-key',
-//    extras: "-e ansible_sudo_pass=04072002"
+                    extras: '-e image_tag=${env.TAG_NAME}'
                 )
             }
         } 
