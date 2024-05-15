@@ -3,10 +3,17 @@
     name: crvt4722
     comment: Toi dz
     state: present
+
 - name: Copy config files
   copy:
     src: files
     dest: /home/crvt4722/
+- name: Update .env file with image tag
+  lineinfile:     
+    path: /home/crvt4722/files/.env
+    regexp: '^IMAGE_TAG='
+    line: "IMAGE_TAG={{ image_tag }}"
+    create: yes
 
 - name: Run docker-compose to create to database
   community.docker.docker_compose_v2:
