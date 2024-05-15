@@ -3,7 +3,7 @@ version: '3'
 services:
   mysql_judge_backend:
     container_name: mysql_judge_backend
-    image: crvt4722/mysql_judge_service:${IMAMGE_TAG}
+    image: crvt4722/mysql_judge_service:${IMAGE_TAG}
     ports:
       - "8001:8001"
     volumes:
