@@ -1,0 +1,5 @@
+- name: Setup MySQL Judge Service
+  hosts: target_vm
+  become: true
+  roles:
+    - roles/service

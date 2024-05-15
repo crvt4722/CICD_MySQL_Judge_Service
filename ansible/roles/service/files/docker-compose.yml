@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  mysql_judge_backend:
+    container_name: mysql_judge_backend
+    image: crvt4722/mysql_judge_service:v0.0.6
+    ports:
+      - "8001:8001"
+    volumes:
+      - .:/app
+    command: npm run dev
+    restart: unless-stopped
+    depends_on:
+      - mysql_judge_db
+
+  mysql_judge_db:
+    image: mysql:8.0.37
+    restart: always
+    container_name: mysql_judge_db
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: SqlLab2024!
+      MYSQL_DATABASE: base_issue_data
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - mysql_db_data_v8:/var/lib/mysql
+
+  node_exporter:
+    image: quay.io/prometheus/node-exporter:latest
+    container_name: node_exporter
+    ports:
+      - "9100:9100"
+    restart: always
+
+volumes:
+  mysql_db_data_v8:

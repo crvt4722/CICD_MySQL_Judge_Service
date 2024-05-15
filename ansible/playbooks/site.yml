@@ -1,0 +1,6 @@
+# Master playbook.
+---
+- import_playbook: setup_docker.yml
+- import_playbook: setup_service.yml
+
+
