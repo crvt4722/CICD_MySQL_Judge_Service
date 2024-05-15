@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKER_CREDENTIALS_ID = 'docker_access_token'  // ID of your Docker Hub credentials in Jenkins
+        DOCKER_CREDENTIALS_ID = 'docker'  // ID of your Docker Hub credentials in Jenkins
         REPO_NAME = 'crvt4722'  // Docker Hub repository name
         IMAGE_NAME = 'mysql_judge_service'  // Image name
     }
