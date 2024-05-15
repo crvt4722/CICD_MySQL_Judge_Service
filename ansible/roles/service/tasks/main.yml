@@ -5,7 +5,7 @@
     state: present
 - name: Copy config files
   copy:
-    src: /var/jenkins_home/workspace/MySQL_Judge_Service_main/ansible/roles/service/files
+    src: ./ansible/roles/service/files
     dest: /home/crvt4722/
 
 - name: Run docker-compose to create to database
