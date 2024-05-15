@@ -3,5 +3,5 @@
   hosts: target_vm
   become: true
   roles:
-    - roles/docker
+    - ../roles/docker
 

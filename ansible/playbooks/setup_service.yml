@@ -2,4 +2,4 @@
   hosts: target_vm
   become: true
   roles:
-    - roles/service
+    - ../roles/service
